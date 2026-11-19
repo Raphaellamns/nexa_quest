@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Missões | Nexa Quest</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><span class="brand-name">nexa<span class="brand-play">play</span></span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a class="nav-link" href="painel.html">Painel</a>
+          <a class="nav-link active" href="missoes.html" aria-current="page">Missões</a>
+          <a class="nav-link" href="conquistas.html">Conquistas</a>
+          <a class="nav-link" href="index.html">Site</a>
+        </nav>
+        <div class="header-actions"><a class="btn btn-header" href="login.html" id="link-sair">Sair</a></div>
+      </div>
+    </header>
+
+    <main id="conteudo" class="page-main">
+      <section class="container page-intro">
+        <h1>Missões do Nexa Quest</h1>
+        <p>Explore as atividades disponíveis ou cadastre novas missões (administradores).</p>
+      </section>
+
+      <section class="container section">
+        <div class="card" style="padding: 28px; border-radius: 20px; margin-bottom: 32px;">
+          <h2 style="margin-bottom: 18px;">Cadastrar nova missão</h2>
+          <form id="form-missao" class="auth-form" style="margin-top: 0; gap: 16px;">
+            <div class="field">
+              <label for="titulo">Título da Missão</label>
+              <input id="titulo" type="text" placeholder="Ex.: Alfabeto Manual em Libras" required />
+            </div>
+            <div class="field">
+              <label for="jornada">Jornada</label>
+              <input id="jornada" type="text" placeholder="Ex.: Primeiros Passos" required />
+            </div>
+            <div class="field">
+              <label for="pontos_recompensa">Pontos de Recompensa</label>
+              <input id="pontos_recompensa" type="number" min="10" value="50" required />
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: max-content;">Cadastrar Missão</button>
+          </form>
+          <p id="mensagem" class="mensagem" style="margin-top: 14px; font-weight: 700;"></p>
+        </div>
+
+        <div class="card" style="padding: 28px; border-radius: 20px;">
+          <h2 style="margin-bottom: 18px;">Missões cadastradas</h2>
+          <div class="actions" style="margin-bottom: 20px;">
+            <div class="field" style="flex: 1; min-width: 220px;">
+              <input id="busca-nome" type="text" placeholder="Buscar missão pelo título..." />
+            </div>
+            <button type="button" id="botao-buscar" class="btn btn-primary">Buscar</button>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; min-width: 560px; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--line); color: var(--purple);">
+                  <th style="padding: 12px;">ID</th>
+                  <th style="padding: 12px;">Missão</th>
+                  <th style="padding: 12px;">Jornada</th>
+                  <th style="padding: 12px;">Recompensa</th>
+                  <th style="padding: 12px;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="lista-missoes"></tbody>
+            </table>
+          </div>
+
+          <div class="actions" style="justify-content: center; align-items: center; margin-top: 24px;">
+            <button type="button" id="botao-anterior" class="btn btn-soft">Anterior</button>
+            <span>Página <strong id="numero-pagina">1</strong></span>
+            <button type="button" id="botao-proxima" class="btn btn-soft">Próxima</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="rodape">
+      <div class="container footer-inner">
+        <div class="footer-brand"><h2>Nexa Play</h2><p>Jogos e experiências interativas.</p></div>
+        <nav class="footer-links"><h2>Links</h2><div class="footer-link-grid">
+          <a href="painel.html">Painel</a><a href="missoes.html">Missões</a>
+          <a href="conquistas.html">Conquistas</a><a href="index.html">Início</a>
+        </div></nav>
+      </div>
+    </footer>
+
+    <script src="js/comum.js"></script>
+    <script src="js/missoes.js"></script>
+  </body>
+</html>

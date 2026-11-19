@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Entre na sua conta Nexa Play." />
+    <meta name="theme-color" content="#fffafd" />
+    <title>Entrar | Nexa Play</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nexa Play — início"><span class="brand-name">nexa<span class="brand-play">play</span></span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a class="nav-link" href="index.html">Início</a><a class="nav-link" href="sobre-nos.html">Sobre</a>
+          <a class="nav-link" href="o-que-fazemos.html">O que fazemos</a><a class="nav-link" href="projetos.html">Projetos</a>
+        </nav>
+        <div class="header-actions"><a class="btn btn-header" href="login.html" aria-current="page">Entrar</a></div>
+        <details class="mobile-menu">
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav aria-label="Navegação para celular">
+            <h2>Navegação</h2><a href="index.html">Início</a><a href="sobre-nos.html">Sobre</a>
+            <a href="o-que-fazemos.html">O que fazemos</a><a href="projetos.html">Projetos</a>
+            <a href="nexa-quest.html">Nexa Quest</a><a href="como-funciona.html">Como funciona</a>
+            <a href="login.html" aria-current="page">Entrar</a><a href="cadastro.html">Criar conta</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="conteudo" class="page-main auth-main">
+      <div class="container auth-shell">
+        <aside class="auth-story" aria-label="Nexa Quest">
+          <div>
+            <h2>Acompanhe o<br />Nexa Quest.</h2>
+            <p>Entre para acompanhar as novidades e as etapas do jogo.</p>
+          </div>
+          <div class="quest-wordmark" role="img" aria-label="Nexa Quest"><span>nexa</span><span><i class="quest-q">q</i>uest</span></div>
+        </aside>
+        <section class="auth-card" aria-labelledby="login-title">
+          <div class="auth-heading">
+            <h1 id="login-title">Entrar na sua conta</h1>
+            <p class="desktop-description">Use seu e-mail e senha para acessar.</p>
+            <p class="mobile-description">Entre para acompanhar as novidades e as etapas do Nexa Quest.</p>
+          </div>
+          <div class="auth-inline-logo quest-wordmark" role="img" aria-label="Nexa Quest"><span>nexa</span><span><i class="quest-q">q</i>uest</span></div>
+          <form class="auth-form" action="#" method="get">
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="senha">Senha</label>
+              <input id="senha" type="password" placeholder="••••••••" autocomplete="current-password" required />
+            </div>
+            <button class="auth-submit" type="submit">Entrar</button>
+          </form>
+          <div class="auth-switch"><span>Ainda não tem conta?</span><a href="cadastro.html">Cadastre-se</a></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
