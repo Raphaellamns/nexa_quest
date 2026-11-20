@@ -1,6 +1,6 @@
 # Nexa Quest
 
-O Nexa Quest é o projeto integrador da Nexa Play. A plataforma incentiva a prática de Libras com missões que rendem pontos, níveis e conquistas.
+O Nexa Quest é o projeto integrador da Nexa Play. A plataforma incentiva a prática de Libras com missões que rendem pontos e níveis.
 
 **Site publicado** — aguardando hospedagem. **Teste local** — [http://localhost:3000](http://localhost:3000) depois da instalação.
 
@@ -9,10 +9,7 @@ O Nexa Quest é o projeto integrador da Nexa Play. A plataforma incentiva a prá
 - Cadastro, login e painel com progresso individual.
 - Missões com busca, paginação e gestão por administradores.
 - Uma recompensa por missão concluída e um nível a cada 100 pontos.
-- Jornadas concluídas quando o participante termina todas as missões que fazem parte delas no catálogo atual.
-- Medalhas por primeira missão, nível 2 e jornada completa.
-- Desafio extra de Libras liberado no nível 2 e opção de compartilhar o resumo de conquistas.
-- Histórico de conclusões e correção de datas.
+- Painel com nível, pontos e lista de missões concluídas.
 
 ## Tecnologias
 

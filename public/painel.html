@@ -20,7 +20,6 @@
         <nav class="main-nav" aria-label="Navegação principal">
           <a class="nav-link active" href="painel.html" aria-current="page">Painel</a>
           <a class="nav-link" href="missoes.html">Missões</a>
-          <a class="nav-link" href="conquistas.html">Conquistas</a>
           <a class="nav-link" href="index.html">Site</a>
         </nav>
         <div class="header-actions"><a class="btn btn-header" href="login.html" data-sair>Sair</a></div>
@@ -30,7 +29,6 @@
             <h2>Navegação</h2>
             <a href="painel.html" aria-current="page">Painel</a>
             <a href="missoes.html">Missões</a>
-            <a href="conquistas.html">Conquistas</a>
             <a href="index.html">Site</a>
             <a href="login.html" data-sair>Sair</a>
           </nav>
@@ -53,8 +51,14 @@
           </dl>
           <div class="actions">
             <a class="btn btn-primary" href="missoes.html">Ver missões</a>
-            <a class="btn btn-soft" href="conquistas.html">Ver conquistas</a>
           </div>
+        </div>
+      </section>
+      <section class="container section" id="historico" hidden>
+        <div class="card painel-cartao">
+          <h2>Missões concluídas</h2>
+          <p id="historico-vazio" hidden>Você ainda não concluiu nenhuma missão.</p>
+          <ul id="lista-missoes-concluidas"></ul>
         </div>
       </section>
     </main>
@@ -67,7 +71,6 @@
           <div class="footer-link-grid">
             <a href="painel.html" aria-current="page">Painel</a>
             <a href="missoes.html">Missões</a>
-            <a href="conquistas.html">Conquistas</a>
             <a href="index.html">Site</a>
           </div>
         </nav>

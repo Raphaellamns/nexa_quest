@@ -10,7 +10,6 @@
 | `POST /missoes` | Cadastra uma missão como administrador. |
 | `PUT /missoes/:id` ou `DELETE /missoes/:id` | Edita ou remove uma missão como administrador. |
 | `POST /progressos` | Registra a conclusão da missão indicada em `missao_id`. |
-| `GET /progressos/resumo` | Retorna nível, pontos, medalhas, jornadas e desbloqueios da conta atual. |
 | `GET /progressos` | Lista as suas conclusões. Administradores podem ver todas e usar `?meus=1` para ver só as próprias. |
 | `PUT /progressos/:id` | Atualiza `data` de uma conclusão. Aceita `AAAA-MM-DD` ou uma data e hora ISO 8601 com fuso. |
 

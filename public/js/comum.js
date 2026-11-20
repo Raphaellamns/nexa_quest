@@ -1,5 +1,5 @@
 const chaveToken = 'nexaquest.token';
-const paginasProtegidas = ['painel.html', 'missoes.html', 'conquistas.html'];
+const paginasProtegidas = ['painel.html', 'missoes.html'];
 
 export function destinoAposLogin() {
   const destino = new URLSearchParams(location.search).get('destino');

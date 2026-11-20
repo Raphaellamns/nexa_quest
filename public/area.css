@@ -21,11 +21,12 @@
 .tabela-container td { overflow-wrap: anywhere; }
 .tabela-container small { display: block; margin-top: 4px; white-space: pre-wrap; }
 .tabela-missoes { min-width: 570px; }
-.tabela-conquistas { min-width: 450px; }
 .acoes-tabela { display: flex; flex-wrap: wrap; gap: 6px; }
 .btn-compacto { width: auto; min-height: 36px; padding-inline: 10px; font-size: 14px; }
 .paginacao { justify-content: center; align-items: center; margin-top: 20px; }
 .paginacao .btn { width: auto; min-width: 92px; padding-inline: 10px; }
+
+#lista-missoes-concluidas { padding-inline-start: 1.25rem; overflow-wrap: anywhere; }
 
 .perfil-cartao h2, .perfil-email { overflow-wrap: anywhere; }
 .perfil-cartao .perfil-email { margin-block: 8px 18px; }

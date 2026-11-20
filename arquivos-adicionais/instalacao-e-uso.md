@@ -20,7 +20,7 @@ O Sequelize cria tabelas que estiverem faltando e adiciona o índice único das 
 
 1. Cadastre uma conta e entre. O Painel deve mostrar o nível 1 e zero pontos.
 2. Em **Missões**, conclua as duas atividades de **Primeiros passos em Libras**. Cada uma rende 50 pontos.
-3. Em **Conquistas**, confira a jornada completa, as medalhas e o desafio extra. Use o botão de compartilhamento e experimente corrigir uma data.
+3. Volte ao **Painel** e confira o nível 2, os 100 pontos e as duas missões na lista de concluídas.
 4. Crie outra conta e execute `npm run tornar-admin -- seu-email@exemplo.com` no terminal. Entre novamente com essa conta para cadastrar, editar ou remover missões.
 5. Uma missão removida aparece como **Missão removida** no histórico. O saldo permanece.
 

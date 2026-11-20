@@ -60,49 +60,6 @@ function lerData(valor) {
   return data;
 }
 
-async function resumo(req, res) {
-  const usuario = await Usuario.findByPk(req.usuario.id, {
-    attributes: ['id', 'nivel', 'pontos_totais'],
-  });
-  if (!usuario) return res.status(401).json({ mensagem: 'Entre na sua conta para continuar.' });
-
-  const [missoes, progresso] = await Promise.all([
-    Missao.findAll({ attributes: ['id', 'jornada'], order: [['jornada', 'ASC']], raw: true }),
-    Progresso.findAll({ where: { usuario_id: usuario.id }, attributes: ['missao_id'], raw: true }),
-  ]);
-  const concluidas = new Set(progresso.map(({ missao_id }) => missao_id));
-  const jornadas = new Map();
-  for (const missao of missoes) {
-    const chave = missao.jornada.toLocaleLowerCase('pt-BR');
-    if (!jornadas.has(chave)) {
-      jornadas.set(chave, { nome: missao.jornada, total: 0, concluidas: 0 });
-    }
-    const jornada = jornadas.get(chave);
-    jornada.total++;
-    if (concluidas.has(missao.id)) jornada.concluidas++;
-  }
-
-  const badges = [];
-  if (progresso.length) badges.push('Primeira missão');
-  if (usuario.nivel >= 2) badges.push('Explorador');
-  if ([...jornadas.values()].some(({ total, concluidas }) => total === concluidas)) {
-    badges.push('Jornada completa');
-  }
-  res.json({
-    nivel: usuario.nivel,
-    pontos_totais: usuario.pontos_totais,
-    badges,
-    jornadas: [...jornadas.values()],
-    conteudos: [{
-      titulo: 'Desafio extra de Libras',
-      nivel_minimo: 2,
-      texto: usuario.nivel >= 2
-        ? 'Prepare uma apresentação em Libras com seu nome, um cumprimento e algo de que você gosta. Pratique diante de um espelho e repita sem consultar suas anotações.'
-        : null,
-    }],
-  });
-}
-
 async function editarData(req, res) {
   const id = inteiroPositivo(req.params.id);
   const data = lerData(req.body?.data);
@@ -117,4 +74,4 @@ async function editarData(req, res) {
   res.json(progresso);
 }
 
-module.exports = { registrar, listar, editarData, resumo };
+module.exports = { registrar, listar, editarData };

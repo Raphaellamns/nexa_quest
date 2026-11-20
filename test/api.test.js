@@ -40,11 +40,18 @@ function autenticarOperador(t) {
 }
 
 test('as páginas e os arquivos JavaScript da área de jogo são servidos', async () => {
-  for (const caminho of ['/', '/login.html', '/cadastro.html', '/painel.html', '/missoes.html', '/conquistas.html', '/js/missoes.js']) {
+  for (const caminho of ['/', '/login.html', '/cadastro.html', '/painel.html', '/missoes.html', '/js/painel.js', '/js/missoes.js']) {
     const resposta = await fetch(`${origem}${caminho}`);
     assert.equal(resposta.status, 200, caminho);
-    await resposta.body.cancel();
+    if (caminho === '/painel.html') {
+      assert.match(await resposta.text(), /id="lista-missoes-concluidas"/);
+    } else {
+      await resposta.body.cancel();
+    }
   }
+  const removida = await fetch(`${origem}/conquistas.html`);
+  assert.equal(removida.status, 404);
+  await removida.body.cancel();
 });
 
 test('cadastro e login inválidos têm resposta JSON legível', async () => {
