@@ -51,7 +51,8 @@ FROM (
 ) AS demo
 WHERE NOT EXISTS (
   SELECT 1 FROM Missaos AS existente
-  WHERE existente.titulo = demo.titulo AND existente.jornada = demo.jornada
+  WHERE existente.titulo = demo.titulo COLLATE utf8mb4_unicode_ci
+    AND existente.jornada = demo.jornada COLLATE utf8mb4_unicode_ci
 );
 
 
