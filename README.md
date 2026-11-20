@@ -18,9 +18,9 @@ HTML, CSS e JavaScript no navegador. Node.js e Express na API REST. Sequelize co
 ## Documentação
 
 - [Instalação e uso](arquivos-adicionais/instalacao-e-uso.md)
-- [Modelagem conceitual](docs/modelagem-conceitual.md)
-- [Modelagem lógica](docs/modelagem-logica.md)
-- [Diagrama entidade-relacionamento](docs/der.md)
+- [Modelo conceitual editável no brModelo](docs/brmodelo/Nexa-Quest-Conceitual.brM3) · [Descrição](docs/modelagem-conceitual.md)
+- [Modelo lógico editável no brModelo](docs/brmodelo/Nexa-Quest-Logico.brM3) · [Dicionário de dados](docs/modelagem-logica.md)
+- [DER exportado do brModelo](docs/der.md)
 - [Scripts SQL de estrutura e carga inicial](arquivos-adicionais/)
 - [Referência da API](docs/api.md)
 

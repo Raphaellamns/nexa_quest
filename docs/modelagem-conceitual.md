@@ -1,5 +1,7 @@
 # Modelagem conceitual
 
+[Arquivo editável do brModelo](brmodelo/Nexa-Quest-Conceitual.brM3) · [DER](der.md)
+
 O **Usuário** é um participante identificado por e-mail. O perfil operador joga, enquanto o perfil administrador também gerencia o catálogo de missões.
 
 A **Missão** é uma atividade com título, descrição, recompensa e jornada. A jornada organiza as missões em grupos temáticos usando o nome cadastrado pelo administrador.

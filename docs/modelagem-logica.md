@@ -1,5 +1,7 @@
 # Modelagem lógica
 
+[Arquivo editável do brModelo](brmodelo/Nexa-Quest-Logico.brM3) · [Imagem do modelo lógico](brmodelo/Nexa-Quest-Logico.png)
+
 | Relação | Coluna | Tipo | Restrição |
 | --- | --- | --- | --- |
 | Usuarios | id | INT | PK, auto incremento |
