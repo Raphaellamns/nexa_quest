@@ -2,7 +2,7 @@
 
 O Nexa Quest é o projeto integrador da Nexa Play. A plataforma incentiva a prática de Libras com missões que rendem pontos e níveis.
 
-**Site publicado** — aguardando hospedagem. **Teste local** — [http://localhost:3000](http://localhost:3000) depois da instalação.
+**Site publicado** — [nexa-quest.vercel.app](https://nexa-quest.vercel.app/). **Teste local** — [http://localhost:3000](http://localhost:3000) depois da instalação.
 
 ## Funcionalidades
 
