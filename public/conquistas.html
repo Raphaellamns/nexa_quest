@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffafd" />
+    <title>Conquistas | Nexa Quest</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="area.css" />
+    <script type="module" src="js/conquistas.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nexa Play — início"><span class="brand-name">nexa<span class="brand-play">play</span></span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a class="nav-link" href="painel.html">Painel</a>
+          <a class="nav-link" href="missoes.html">Missões</a>
+          <a class="nav-link active" href="conquistas.html" aria-current="page">Conquistas</a>
+          <a class="nav-link" href="index.html">Site</a>
+        </nav>
+        <div class="header-actions"><a class="btn btn-header" href="login.html" data-sair>Sair</a></div>
+        <details class="mobile-menu">
+          <summary aria-label="Menu de navegação">Menu</summary>
+          <nav aria-label="Navegação para celular">
+            <h2>Navegação</h2>
+            <a href="painel.html">Painel</a>
+            <a href="missoes.html">Missões</a>
+            <a href="conquistas.html" aria-current="page">Conquistas</a>
+            <a href="index.html">Site</a>
+            <a href="login.html" data-sair>Sair</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="page-main area-painel" tabindex="-1">
+      <section class="container page-intro">
+        <h1>Minhas conquistas</h1>
+        <p id="mensagem-conquistas" class="mensagem" role="status"></p>
+      </section>
+      <section class="container section" id="resumo-conquistas" hidden>
+        <div class="card">
+          <h2>Medalhas</h2>
+          <ul id="badges"></ul>
+          <h2>Jornadas</h2>
+          <ul id="jornadas"></ul>
+          <h2>Conteúdos extras</h2>
+          <ul id="conteudos-extras"></ul>
+          <div class="actions" id="acoes-compartilhar"></div>
+        </div>
+      </section>
+      <section class="container section" id="historico" hidden>
+        <div class="card painel-cartao">
+          <h2 id="titulo-historico">Missões concluídas</h2>
+          <form id="form-data" class="painel-form" method="post" hidden>
+            <div class="field">
+              <label for="data-conclusao">Data e hora da conclusão</label>
+              <input id="data-conclusao" name="data" type="datetime-local" step="1" min="1000-01-01T00:00" max="9999-12-31T23:59:59" required />
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Salvar data</button>
+              <button class="btn btn-soft" type="button" id="cancelar-data">Cancelar</button>
+            </div>
+          </form>
+          <div class="tabela-container" role="region" aria-labelledby="titulo-historico" tabindex="0">
+            <table class="tabela-conquistas">
+              <thead>
+                <tr>
+                  <th scope="col">Missão</th>
+                  <th scope="col">Jornada</th>
+                  <th scope="col">Concluída em</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="lista-conquistas"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="rodape">
+      <div class="container footer-inner">
+        <div class="footer-brand"><h2>Nexa Play</h2><p>Jogos e experiências interativas.</p></div>
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <h2>Links</h2>
+          <div class="footer-link-grid">
+            <a href="painel.html">Painel</a>
+            <a href="missoes.html">Missões</a>
+            <a href="conquistas.html" aria-current="page">Conquistas</a>
+            <a href="index.html">Site</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

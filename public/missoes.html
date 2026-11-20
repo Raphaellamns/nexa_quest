@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffafd" />
+    <title>Missões | Nexa Quest</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="area.css" />
+    <script type="module" src="js/missoes.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Nexa Play — início"><span class="brand-name">nexa<span class="brand-play">play</span></span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a class="nav-link" href="painel.html">Painel</a>
+          <a class="nav-link active" href="missoes.html" aria-current="page">Missões</a>
+          <a class="nav-link" href="conquistas.html">Conquistas</a>
+          <a class="nav-link" href="index.html">Site</a>
+        </nav>
+        <div class="header-actions"><a class="btn btn-header" href="login.html" data-sair>Sair</a></div>
+        <details class="mobile-menu">
+          <summary aria-label="Menu de navegação">Menu</summary>
+          <nav aria-label="Navegação para celular">
+            <h2>Navegação</h2>
+            <a href="painel.html">Painel</a>
+            <a href="missoes.html" aria-current="page">Missões</a>
+            <a href="conquistas.html">Conquistas</a>
+            <a href="index.html">Site</a>
+            <a href="login.html" data-sair>Sair</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="page-main area-painel" tabindex="-1">
+      <section class="container page-intro">
+        <h1>Missões do Nexa Quest</h1>
+        <p id="mensagem-pagina" class="mensagem" role="status"></p>
+      </section>
+      <section class="container section" id="painel-missoes" hidden>
+        <div class="card painel-cartao" id="formulario-missao" hidden>
+          <h2 id="titulo-form-missao">Cadastrar nova missão</h2>
+          <form id="form-missao" class="painel-form" method="post">
+            <div class="field">
+              <label for="titulo">Título da missão</label>
+              <input id="titulo" name="titulo" type="text" maxlength="255" required />
+            </div>
+            <div class="field">
+              <label for="jornada">Jornada</label>
+              <input id="jornada" name="jornada" type="text" maxlength="255" required />
+            </div>
+            <div class="field">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" name="descricao" rows="3" maxlength="65535"></textarea>
+            </div>
+            <div class="field">
+              <label for="pontos_recompensa">Pontos de recompensa</label>
+              <input id="pontos_recompensa" name="pontos_recompensa" type="number" min="1" max="2147483647" value="50" required />
+            </div>
+            <div class="actions">
+              <button type="submit" class="btn btn-primary">Cadastrar missão</button>
+              <button type="button" class="btn btn-soft" id="cancelar-missao" hidden>Cancelar</button>
+            </div>
+          </form>
+          <p id="mensagem-missao" class="mensagem" role="status"></p>
+        </div>
+
+        <div class="card painel-cartao">
+          <h2 id="titulo-lista">Missões cadastradas</h2>
+          <form class="actions busca-missoes" id="form-busca" role="search">
+            <div class="field">
+              <label for="busca-nome">Buscar pelo título</label>
+              <input id="busca-nome" name="nome" type="search" maxlength="255" />
+            </div>
+            <button type="submit" id="botao-buscar" class="btn btn-primary" disabled>Buscar</button>
+          </form>
+          <p id="mensagem-lista" class="mensagem" role="status"></p>
+          <div class="tabela-container" role="region" aria-labelledby="titulo-lista" tabindex="0">
+            <table class="tabela-missoes">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Missão</th>
+                  <th scope="col">Jornada</th>
+                  <th scope="col">Pontos</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="lista-missoes"></tbody>
+            </table>
+          </div>
+          <div class="actions paginacao">
+            <button type="button" id="botao-anterior" class="btn btn-soft" disabled>Anterior</button>
+            <span>Página <strong id="numero-pagina">1</strong></span>
+            <button type="button" id="botao-proxima" class="btn btn-soft" disabled>Próxima</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="rodape">
+      <div class="container footer-inner">
+        <div class="footer-brand"><h2>Nexa Play</h2><p>Jogos e experiências interativas.</p></div>
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <h2>Links</h2>
+          <div class="footer-link-grid">
+            <a href="painel.html">Painel</a>
+            <a href="missoes.html" aria-current="page">Missões</a>
+            <a href="conquistas.html">Conquistas</a>
+            <a href="index.html">Site</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

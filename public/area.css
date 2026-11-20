@@ -1,0 +1,47 @@
+[hidden] { display: none !important; }
+
+.area-painel { min-height: calc(100vh - 270px); }
+.painel-cartao {
+  min-width: 0;
+  padding: clamp(16px, 3vw, 28px);
+  border-radius: 20px;
+}
+.painel-cartao + .painel-cartao { margin-top: 28px; }
+.painel-cartao h2 { margin-bottom: 18px; }
+.painel-form { display: grid; gap: 16px; margin-block: 16px; }
+.painel-form .actions { align-items: center; }
+.busca-missoes { align-items: end; margin-bottom: 16px; }
+.busca-missoes .field { flex: 1 1 240px; min-width: 0; }
+.busca-missoes .btn { min-height: 55px; }
+
+.tabela-container { overflow-x: auto; }
+.tabela-container table { width: 100%; border-collapse: collapse; text-align: left; }
+.tabela-container th, .tabela-container td { padding: 12px 10px; border-bottom: 1px solid var(--line); }
+.tabela-container th { color: var(--purple); }
+.tabela-container td { overflow-wrap: anywhere; }
+.tabela-container small { display: block; margin-top: 4px; white-space: pre-wrap; }
+.tabela-missoes { min-width: 570px; }
+.tabela-conquistas { min-width: 450px; }
+.acoes-tabela { display: flex; flex-wrap: wrap; gap: 6px; }
+.btn-compacto { width: auto; min-height: 36px; padding-inline: 10px; font-size: 14px; }
+.paginacao { justify-content: center; align-items: center; margin-top: 20px; }
+.paginacao .btn { width: auto; min-width: 92px; padding-inline: 10px; }
+
+.perfil-cartao h2, .perfil-email { overflow-wrap: anywhere; }
+.perfil-cartao .perfil-email { margin-block: 8px 18px; }
+.perfil-resumo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-block: 18px 24px;
+}
+.perfil-resumo div { padding: 16px; border-radius: 14px; background: var(--lilac); }
+.perfil-resumo dt { font-weight: 700; }
+.perfil-resumo dd { margin: 4px 0 0; color: var(--purple); font-size: 28px; font-weight: 900; overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .area-painel { min-height: 0; }
+  .paginacao { gap: 8px; }
+  .paginacao .btn { min-width: 0; }
+  .tabela-container th, .tabela-container td { padding-inline: 8px; }
+}
