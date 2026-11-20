@@ -23,4 +23,4 @@
 
 Cada entidade guarda seus próprios atributos. `Progressos` resolve a relação muitos-para-muitos entre usuários e missões. O nível é derivado do saldo e armazenado em conjunto com ele. O saldo preserva a recompensa concedida na conclusão, mesmo após mudanças no catálogo. A API grava a conclusão e atualiza o saldo e o nível na mesma transação.
 
-A implementação física está nos [scripts SQL](../arquivos-adicionais/).
+A implementação física está no [script SQL](../arquivos-adicionais/nexaquestdb.sql).

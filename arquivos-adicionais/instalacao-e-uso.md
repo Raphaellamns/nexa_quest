@@ -1,7 +1,7 @@
 # Instalação e uso
 
 1. Instale Node.js 20 ou superior e MySQL 8.0.16 ou superior. Abra o terminal na pasta do projeto.
-2. Execute [01-criar-banco.sql](01-criar-banco.sql) no MySQL Workbench ou no terminal MySQL. Selecione o banco com `USE nexaquest;` e execute [02-criar-tabelas.sql](02-criar-tabelas.sql) e [03-inserir-dados.sql](03-inserir-dados.sql). A carga insere três missões de Libras para demonstração.
+2. Execute o arquivo inteiro [nexaquestdb.sql](nexaquestdb.sql) no MySQL Workbench ou no terminal MySQL. Ele cria e seleciona o banco, cria as tabelas e insere três missões de Libras para demonstração.
 3. Prepare a configuração no PowerShell.
 
    ```powershell

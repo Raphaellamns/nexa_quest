@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS nexaquest CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE nexaquest;
+
 CREATE TABLE IF NOT EXISTS Usuarios (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
@@ -33,3 +36,22 @@ CREATE TABLE IF NOT EXISTS Progressos (
   FOREIGN KEY (usuario_id) REFERENCES Usuarios(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (missao_id) REFERENCES Missaos(id) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO Missaos (titulo, jornada, descricao, pontos_recompensa, createdAt, updatedAt)
+SELECT demo.titulo, demo.jornada, demo.descricao, demo.pontos, UTC_TIMESTAMP(), UTC_TIMESTAMP()
+FROM (
+  SELECT 'Alfabeto manual' AS titulo, 'Primeiros passos em Libras' AS jornada,
+         'Pratique o alfabeto manual e soletre seu primeiro nome.' AS descricao, 50 AS pontos
+  UNION ALL
+  SELECT 'Cumprimentos em Libras', 'Primeiros passos em Libras',
+         'Pratique três cumprimentos e use um deles em uma conversa.', 50
+  UNION ALL
+  SELECT 'Apresentação em Libras', 'Comunicação em Libras',
+         'Grave uma apresentação breve com seu nome e um cumprimento.', 75
+) AS demo
+WHERE NOT EXISTS (
+  SELECT 1 FROM Missaos AS existente
+  WHERE existente.titulo = demo.titulo AND existente.jornada = demo.jornada
+);
+
+

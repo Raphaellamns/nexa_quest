@@ -21,7 +21,7 @@ HTML, CSS e JavaScript no navegador. Node.js e Express na API REST. Sequelize co
 - [Modelo conceitual editável no brModelo](docs/brmodelo/Nexa-Quest-Conceitual.brM3) · [Descrição](docs/modelagem-conceitual.md)
 - [Modelo lógico editável no brModelo](docs/brmodelo/Nexa-Quest-Logico.brM3) · [Dicionário de dados](docs/modelagem-logica.md)
 - [DER exportado do brModelo](docs/der.md)
-- [Scripts SQL de estrutura e carga inicial](arquivos-adicionais/)
+- [Script SQL de criação e carga inicial](arquivos-adicionais/nexaquestdb.sql)
 - [Referência da API](docs/api.md)
 
 Execute `npm test` para rodar os testes automatizados. O guia de instalação inclui um roteiro de validação com MySQL.
