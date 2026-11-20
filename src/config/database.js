@@ -1,5 +1,6 @@
 const path = require('node:path');
 const { Sequelize } = require('sequelize');
+const mysql2 = require('mysql2');
 
 require('dotenv').config({ path: path.join(__dirname, '../../.env'), quiet: true });
 
@@ -11,6 +12,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST || '127.0.0.1',
     port: process.env.DB_PORT || 3306,
     dialect: 'mysql',
+    dialectModule: mysql2,
     logging: false,
     ...(process.env.DB_SSL === 'true' && {
       dialectOptions: { ssl: { minVersion: 'TLSv1.2', rejectUnauthorized: true, verifyIdentity: true } },
